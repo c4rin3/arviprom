@@ -1,0 +1,639 @@
+/* BASE ------------------------------- */
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@font-face {
+    font-family: 'texgyreadventorregular';
+    src: url('../fonts/texgyreadventor_regular/texgyreadventor-regular-webfont.eot');
+    src: url('../fonts/texgyreadventor_regular/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texgyreadventor_regular/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('../fonts/texgyreadventor_regular/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('../fonts/texgyreadventor_regular/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'texgyreadventorbold';
+    src: url('../fonts/texgyreadventor_bold/texgyreadventor-bold-webfont.eot');
+    src: url('../fonts/texgyreadventor_bold/texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texgyreadventor_bold/texgyreadventor-bold-webfont.woff') format('woff'),
+         url('../fonts/texgyreadventor_bold/texgyreadventor-bold-webfont.ttf') format('truetype'),
+         url('../fonts/texgyreadventor_bold/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'socicon';
+    src: url('../fonts/socicon/socicon-webfont.eot');
+    src: url('../fonts/socicon/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/socicon/socicon-webfont.woff') format('woff'),
+         url('../fonts/socicon/socicon-webfont.ttf') format('truetype'),
+         url('../fonts/socicon/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+	font: 105%/1.5 "texgyreadventorregular", helvetica, arial, sans-serif;
+	font-weight: normal;
+	/*text-rendering: optimizeLegibility;*/
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-webkit-text-stroke: 0.25px;
+
+}
+body {
+	background: url(../images/bg.png) fixed #fff;
+	color: #555;
+	color: #333;
+	width:100%;
+	height:100%;
+}
+.container {
+	margin: 0 auto;
+	max-width: 59rem;
+	width: 90%; 
+	/*
+	max-width: 69rem;
+	width: 95%; 
+	*/
+}
+header .container {
+	margin: 0 auto;
+	max-width: 59rem;
+	width: 90%; 
+	max-width: 70rem;
+	width: 90%; 
+}
+
+/* HEADER  ------------------------------- */
+header {
+	position:fixed;
+	width:100%;
+	z-index:15;
+	margin: 0 auto;
+	height:70px;
+	top:30px;
+	background:#FFF;
+	box-shadow: 0px 1px 5px #777;
+}
+
+header #logo { display: inline-block;  float:left; padding: 0;margin: 0; position: relative; top:-31px;}
+
+.arviprom header{ 
+	background: rgba(255,0,0,1.0);
+	background-image: linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -moz-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -webkit-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -ms-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -o-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	border-bottom:1px solid rgba(166,40,33,1.0);
+}
+.bvc header{ 
+	background:rgba(0, 180, 222,1.0);
+	background-image: linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+	background-image: -moz-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -webkit-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -ms-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -o-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+
+	background:rgba(0, 180, 222,1.0);
+	background-image: linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+	background-image: -moz-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -webkit-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -ms-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -o-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+
+	border-bottom:1px solid #007f9e;
+}
+
+/* LOGO + BOX SHADOW EFFECT -----------------------------------------------------------------*/
+.img_logo { width:145px; height:145px; }
+.bvc .img_logo { border:1px solid rgba(132,117,78,0.5); }
+.bloc {
+	padding:0 5px 5px 5px;
+	background:#FFF;
+}
+
+.effect {
+	position: relative;
+}
+.effect:before {
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 17px;
+	left: 8px;
+	width: 70%;
+	top: 70%;
+	max-width:150px;
+	background: #777;
+	-webkit-box-shadow: 0 15px 10px #777;
+	-moz-box-shadow: 0 15px 10px #777;
+	box-shadow: 0 15px 10px #777;
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+
+/* -------- HEADER MENU HOVER SPECS ------------*/
+header.page1 .men .hover,
+header.page2 .men1 .hover,
+header.page3 .men2 .hover,
+header.page4 .men3 .hover,
+header.page5 .men4 .hover,
+header.page6 .men5 .hover,
+header.page7 .men6 .hover,
+header.page8 .men7 .hover,
+header.page9 .men8 .hover {;top: 0;}
+
+/* ------------ SECTION/PAGES ------------------------------------------------------ */
+section {
+	border-top: 1px solid #eee;
+	padding: 14rem 0;
+}
+
+#page9 {
+	padding: 11rem 0 4rem;
+}
+.arviprom section { background:url("../images/bg_arviprom02.svg") no-repeat fixed; background-size: 100% auto; }
+
+.arviprom #page1  {
+	background:url("../images/bg_arviprom03.svg") no-repeat fixed;
+	background-size: 100% auto;
+}
+.arviprom #page8  {
+	background:url("../images/bg_arviprom01.svg") no-repeat fixed;
+	background-size: 100% auto;
+}
+.bvc section {
+	background:url("../images/bg_bvc02.svg") no-repeat fixed;
+	background-size: 100% auto;
+}
+
+.bvc #page1  {
+	background:url("../images/bg_bvc01.svg") no-repeat fixed;
+	background-size: 100% auto;
+}
+.bvc #page8  {
+	background:url("../images/bg_bvc03.svg") no-repeat fixed;
+	background-size: 100% auto;
+}
+section:first-of-type { border-top: none; }
+
+/* ------------SECTION / PAGES ------------------ */
+#page9 figure  {
+	top: 0px;	
+	width: 100%;
+	height: 352px;
+}
+.arviprom #page9 figure { border: 1px solid #c53731; }
+.bvc #page9 figure{ border: 1px solid #459CBC; }
+#page8 {min-height:1000px;}
+
+/* ------------ FOOTER ------------------ */
+footer {color:#FFF; font-size:75%; padding:20px 0px 1rem 0px;}
+.arviprom footer { background:#c53731;
+	background: rgba(255,0,0,1.0);
+	background-image: linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -moz-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -webkit-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -ms-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -o-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+
+}
+.bvc footer{
+	background: #459CBC;
+	background: #00B4DE; /* BLEU EXACT DU LOGO */
+	background:#007F9E; /* BLEU + Foncé */
+	background-image: linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+	background-image: -moz-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -webkit-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -ms-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -o-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+}
+footer .right{
+	text-align:right;
+	float:right;
+}
+footer .right, footer .left{
+	display:inline-block;
+	width:49%;
+	color: rgba(255,255,255,0.5);
+}
+footer a{
+	color: rgba(255,255,255,0.5);
+}
+.infos { font-size:85%;}
+
+#scroll_top {
+	display:none;
+}
+
+/* ------------ GRID ------------------ */
+.column { margin-bottom: 1.5rem; }
+@media (min-width: 40rem) {
+  .column {
+		float: left;
+		margin: 0;
+  }
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 24.95%; }
+  .column.flow-opposite { float: right; }
+}
+
+/* Typography
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	font-weight: normal;
+}
+/* ROUGE ARVIPROM */
+.arviprom h1, .arviprom h2, .arviprom h3, .arviprom h4, .arviprom h5 {
+	color:#FF0000; /* RED */
+	color: #EE1010; /* RED GARANCE */
+}
+/* BLEU BVC */
+.bvc h1, .bvc h2, .bvc h3, .bvc h4, .bvc h5{
+	color:#007F9E; /* BLEU + Foncé */
+	color: #00B4DE; /* BLEU EXACT DU LOGO */
+	color:#0095B6; /* BLEU BONDI*/
+}
+/*
+.bvc .flexslider h1 {
+	border-bottom: 1px solid rgba(132,117,78,0.3);
+}
+.bvc .flexslider h1:before {
+    content:url('../images/palmier.png');
+    content:url('../images/palmier.svg');
+	margin-right:5px;
+	line-height: 0.1em;
+	vertical-align: -0.25em;
+	overflow:visible;
+}
+*/
+.bvc .flexslider h2 {
+	border-bottom: 1px solid rgba(132,117,78,0.3);
+}
+.bvc .flexslider h2:before {
+    content:url('../images/palmier.png');
+    content:url('../images/palmier.svg');
+	margin-right:5px;
+	line-height: 0.1em;
+	vertical-align: -0.25em;
+	overflow:visible;
+}
+
+.bvc #page2 h1, .bvc #page3 h1, .bvc #page4 h1, .bvc #page5 h1, .bvc #page6 h1, .bvc #page7 h1, .bvc #page8 h1, .bvc #page9 h1{
+	border-bottom: 1px solid rgba(132,117,78,0.3);
+}
+
+.bvc #page2 h1:before, .bvc #page3 h1:before, .bvc #page4 h1:before, .bvc #page5 h1:before, .bvc #page6 h1:before, .bvc #page7 h1:before, .bvc #page8 h1:before, .bvc #page9 h1:before {
+    content:url('../images/palmier.png');
+    content:url('../images/palmier.svg');
+	margin-right:5px;
+	margin-right:0px;
+	line-height: 0.1em;
+	vertical-align: -0.35em;
+	overflow:visible;
+}
+h1 {
+	font-size: 1.3rem;
+	line-height: 1.3em;
+	margin-bottom: 1.5rem;
+}
+h2 {
+	font-size: 1.2rem;
+	line-height: 1.2em;
+	margin-bottom: 1.5rem;
+}
+h3 {
+	font-size: 1.1rem;
+	margin-bottom: .5rem;
+}
+p {
+	margin: 0.5em 0 1.5em 0;
+}
+i {
+    color: #555;
+    font-size: 90%;
+    font-style: normal;
+	margin: 0.5em 0px 1.5em;
+}
+
+/* Important Text - keywords */
+/*
+.bold { font-weight:700; }
+.section_bold { font-family:'texgyreadventorbold'; font-weight:normal; }
+*/
+
+strong {
+	font-weight:700;
+}
+#page2 strong, #page3 strong, #page4 strong, #page5 strong, #page6 strong, #page7 strong, #page8 strong, #page9 strong {
+	font-family:'texgyreadventorbold';
+	font-weight:normal;
+}
+
+/* mise en forme nom */
+.arviprom_nom, .bvc_nom { color:#000; }
+.arviprom_nom:before {
+    content: "\25BA";
+    font-size: 90%;
+    display: inline-block;
+    padding-right: 3px;
+    padding-right: 1px;
+    pointer-events: none;
+	color: #EE1010; /* RED GARANCE */
+}
+.bvc_nom:before {
+    content: "\25BA";
+    font-size: 80%;
+    display: inline-block;
+    padding-right: 3px;
+    pointer-events: none;
+	color: #00B4DE; /* BLEU EXACT DU LOGO */
+	color:#0095B6; /* BLEU BONDI*/
+}
+blockquote { 
+	margin: 0;
+	quotes: "\201C""\201C";
+	quotes: "“" "”";
+}
+blockquote:before {
+	content: open-quote;
+	font-family: Georgia, Times, Times New Roman, Garamond, serif;
+	font-size: 2em;
+	line-height: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: -0.4em;
+}
+blockquote:after {
+	content: close-quote;
+	font-family: Georgia, Times, Times New Roman, Garamond, serif;
+	font-size: 2em;
+	line-height: 0.1em;
+	margin-left: 0.1em;
+	vertical-align: -0.4em;
+}
+blockquote h3, blockquote h2  {
+  display: inline;
+}
+.quote { 
+	margin: 0;
+	quotes: "\201C""\201C";
+	quotes: "“" "”";
+	display:block;
+}
+.quote:before {
+	content: open-quote;
+	font-family: Georgia, Times, Times New Roman, Garamond, serif;
+	font-size: 2em;
+	line-height: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: -0.4em;
+	font-weight:normal;
+}
+.quote:after {
+	content: close-quote;
+	font-family: Georgia, Times, Times New Roman, Garamond, serif;
+	font-size: 2em;
+	line-height: 0.1em;
+	margin-left: 0.1em;
+	vertical-align: -0.4em;
+	font-weight:normal;
+
+}
+.quote h3, .quote h2  {
+  display: inline;
+}
+
+q:after {content: close-quote;}
+
+ol.missions { margin:0; padding-left:1.3em; counter-reset: mission;/*font-size:1.2rem;color:#C53731;*/}
+ol.missions >li {
+	margin:0;
+	margin-left:0;
+	padding:0;
+    list-style-type: none;
+	display: block;
+    counter-increment: mission; /* on incrémente le compteur à chaque nouveau li */
+    display: block;
+}
+ol.missions >li:before {
+    content: counter(mission) ".  "; /* on affiche le compteur */
+    padding: 0;
+    margin-left:-1.1em;
+    font-size:1.2rem;
+	float:left;
+    padding: 0 0.5em 0.3em 0;
+}
+.arviprom ol.missions >li:before { color: #EE1010; /* RED GARANCE */}
+.bvc ol.missions >li:before { color:#007F9E; /* BLEU + Foncé */ color: #00B4DE; /* BLEU EXACT DU LOGO */ color:#0095B6; /* BLEU BONDI*/}
+ul {
+	margin: 0;
+	padding:2em;
+	padding-top:0.5em;
+	padding:0.5em 2em 1.0em 2em;
+	padding:0em 2em 1.0em 2em;
+	color:#555;
+	color:#333;
+}
+ul.square {list-style-type:square;}
+ul.disc {list-style-type:disc;}
+ul.circle {list-style-type:circle;}
+address {font-style:normal;}
+
+a h3.download {color:#000; text-align:center; background:rgba(0,0,0,0.3); margin-bottom:1.3em;  }
+a:hover h3.download {text-decoration:underline; color:#000; }
+h3.download {color:#000; vertical-align: middle; padding: 10px 0;}
+h3.download img {
+    display: inline-block;
+    margin:-5px 10px 0 0;
+	vertical-align: middle;
+	width:30px;
+	height:auto;
+	vertical-align: middle;
+}
+/* Links
+-------------------------------------------------------------- */
+a { color:#333; text-decoration: none;}
+a:hover { text-decoration: underline; }
+/* Buttons
+-------------------------------------------------------------- */
+
+
+
+#social-pages { 
+	width:100%;
+	margin-top:2em;
+}
+#social-pages a, #social-pages a:visited, #social-pages a:hover {
+	text-decoration:none
+}
+.hi-icon {
+	display: inline-block;
+	font-size: 0px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 0%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	margin-right:0.5rem;
+}
+.hi-icon:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 0%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+.hi-icon:before {
+	font-family: 'socicon' !important;
+	color:#FFF;
+	speak: none;
+	font-size: 1.2rem;
+	line-height: 40px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+}
+.hi-icon.social-pages-facebook:before {
+	content:"b";
+}
+.hi-icon.social-pages-google:before {
+	content:"c";
+}
+#social-pages .hi-icon {
+	box-shadow: 0 0 0 2px red;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+#social-pages .hi-icon:after {
+	top: -2px;
+	left: -2px;
+	padding: 2px;
+	z-index: -1;
+	background: red;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	transition: transform 0.2s, opacity 0.2s;
+}
+#social-pages .hi-icon:hover:after {
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.2s;
+	transition: transform 0.4s, opacity 0.2s;
+}
+#social-pages .hi-icon:hover:before {
+	color: red;
+}
+/*---------------------------------*/
+
+
+#share-buttons  {
+	position:fixed;
+	right:0px;
+	top:40%;
+	top:14rem;
+	box-shadow: -1px 1px 3px #777;
+}
+#share-buttons #partager {
+	display:none;
+}
+#share-buttons  a{
+	display:block;
+	margin:0 ;
+	padding:0;
+}
+.socicon {
+    font-family: 'socicon' !important;
+	position: relative;
+	top: 8%;
+	vertical-align:middle;
+	display: inline-block;
+	font-family: 'socicon';
+	-webkit-font-smoothing: antialiased;
+	color:#FFF;
+	font-size:1.2rem;
+}
+.socicon:empty{
+	width: 1em;
+}
+.socicon-mail {   }
+.socicon-twitter:before { content: "a";  }
+.socicon-facebook:before { content: "b"; }
+.socicon-google:before { content: "c"; }
+.socicon-linkedin:before { content: "j"; }
+.socicon-viadeo:before { content: "k"; }
+.pure-button {
+	display:inline-block;
+	width:35px;
+	height:35px;
+	text-align:center;
+}
+.pure-button-mail {
+	background: url("../images/mail.png") no-repeat;
+	background: url("../images/mail.svg") no-repeat;
+}
+.pure-button-twitter { background:#4da7de;}
+.pure-button-facebook { background:#3e5b98;}
+.pure-button-google { background:#d93e2d;}
+.pure-button-linkedin { background:#3371b7;}
+.pure-button-viadeo { background:#e4a000;}
+/* Elements
+-------------------------------------------------------------- */
+hr{
+	border: 0;
+	border-top: 1px solid #ddd;
+}
+
+hr.small { margin: 1.5rem auto; }
+img{
+	display: block;
+	padding:0;
+	margin:0;
+}
+svg{
+	display: block;
+	padding:0;
+	margin:0;
+}
+figure {
+	padding:0;
+	margin:0;
+}
+/* Clearfix by Nicolas Gallagher
+-------------------------------------------------------------- */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }

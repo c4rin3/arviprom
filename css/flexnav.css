@@ -1,0 +1,248 @@
+/* Flexnav Base Styles */
+.flexnav {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	transition: none;
+	-webkit-transform-style: preserve-3d;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	max-height: 0;
+}
+.flexnav.opacity { opacity: 0; }
+.flexnav.flexnav-show {
+	max-height: 2000px;
+	opacity: 1;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out; 
+}
+.flexnav.one-page {
+	position: fixed;
+	top: 90px;
+	right: 5%;
+	max-width: 250px; 
+	box-shadow: 0 1px 3px #777;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+	.flexnav.one-page {
+		position: absolute;
+		top: 70px;
+	}
+}
+
+.flexnav li {
+	font-size: 100%;
+	font-size: 90%;
+	position: relative;
+	overflow: hidden; 
+	display:block;
+}
+.flexnav li a {
+    position: relative;
+    display: block;
+    padding: .96em;
+    padding: .5em;
+    z-index: 2;
+    overflow: hidden;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+}
+.arviprom .flexnav li a { background: #EE1010; }
+.arviprom .flexnav li a:hover { background: #ac0202;}
+.bvc .flexnav li a { background: #0095B6; background: #00b4de; }
+.bvc .flexnav li a:hover { background: #007f9e;}
+.flexnav li a:hover {text-decoration:none;}
+.flexnav li ul {
+    width: 100%; }
+    .flexnav li ul li {
+      font-size: 100%;
+      position: relative;
+      overflow: hidden; 
+}
+.flexnav li ul.flexnav-show li { overflow: visible; }
+.flexnav .touch-button {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    background: #acaca1;
+    background: rgba(0, 0, 0, 0.75);
+    text-align: center; 
+}
+.flexnav .touch-button:hover { cursor: pointer; }
+.flexnav .touch-button .navicon {
+      position: relative;
+      top: 1.4em;
+      font-size: 12px;
+      color: #666; 
+}
+.menu-button {
+	position: relative;
+	display: block;
+	padding: 1em;
+	color: #fff;
+	cursor: pointer;
+}
+.arviprom .menu-button {
+	background: rgba(255,0,0,1.0);
+	background-image: linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -moz-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -webkit-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -ms-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	background-image: -o-linear-gradient(rgba(255,0,0,1.0) 0%, rgba(166,40,33,1.0) 100%); 
+	border-bottom:1px solid rgba(166,40,33,1.0);
+}
+.bvc .menu-button {
+	background:rgba(0, 180, 222,1.0);
+	background-image: linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+	background-image: -moz-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -webkit-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -ms-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%);
+	background-image: -o-linear-gradient(rgba(0, 180, 222,1.0) 0%, rgba(0, 127, 158, 1.0) 100%); 
+	border-bottom:1px solid #007f9e;
+}
+.menu-button.one-page {
+    position: relative;
+    display:inline-block;
+    float:right;
+    top: 0;
+    padding-right: 45px; 
+	width:70px;
+   	height:70px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.menu-button .touch-button {
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+	width:70px;
+   	height:70px;
+    display: inline-block;
+    text-align: center;
+	background: url('../images/icon_menu.png');
+	background: url('../images/icon_menu.svg');
+}
+.menu-button .touch-button .navicon {
+      font-size: 16px;
+      position: relative;
+      top: 1em;
+      color: #fff;
+      display:none;
+}
+@media all and (min-width: 1200px) {
+	body.one-page { padding-top: 70px; }
+	.flexnav { overflow: visible; }
+    .flexnav.opacity { opacity: 1; }
+    .flexnav.one-page {
+		top: 0;
+		right: auto;
+		max-width: 1080px;
+	}
+    .flexnav li {
+		position: relative;
+		list-style: none;
+		float: left;
+		display: block;
+		background-color: #a6a6a2;
+		overflow: visible;
+		width: 20%;
+	}
+    .flexnav li a {
+		border-left: 1px solid #acaca1;
+		border-bottom: none;
+	}
+    .flexnav li > ul {
+		position: absolute;
+		top: auto;
+		left: 0;
+	}
+	.flexnav li > ul li {
+        width: 100%; }
+    .flexnav li ul li > ul {
+		margin-left: 100%;
+		top: 0;
+	}
+    .flexnav li ul li a {
+      border-bottom: none; }
+    .flexnav li ul.open {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+		z-index: 1;
+	}
+	.flexnav li ul.open li {
+        overflow: visible;
+        max-height: 100px;
+    }
+	.flexnav li ul.open ul.open {
+        margin-left: 100%;
+        top: 0;
+    }
+	.menu-button.one-page { display: none; } 
+}
+
+.oldie body.one-page { padding-top: 70px; }
+.oldie .flexnav { overflow: visible; }
+.oldie .flexnav.one-page {
+    top: 0;
+    right: auto;
+    max-width: 1080px; 
+}
+.oldie .flexnav li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    background-color: #a6a6a2;
+    width: 20%;
+    min-height: 50px;
+    overflow: visible; 
+}
+.oldie .flexnav li:hover > ul {
+	display: block;
+	width: 100%;
+    overflow: visible; 
+}
+.oldie .flexnav li:hover > ul li { width: 100%; float: none; }
+.oldie .flexnav li a {
+    border-left: 1px solid #acaca1;
+    border-bottom: none;
+    overflow: visible; 
+}
+.oldie .flexnav li > ul {
+    background: #acaca1;
+    position: absolute;
+    top: auto;
+    left: 0;
+    display: none;
+    z-index: 1;
+    overflow: visible; 
+}
+.oldie .flexnav li ul li ul { top: 0; }
+.oldie .flexnav li ul li a { border-bottom: none; }
+.oldie .flexnav li ul.open {
+    display: block;
+    width: 100%;
+    overflow: visible; 
+}
+.oldie .flexnav li ul.open li { width: 100%; }
+.oldie .flexnav li ul.open ul.open {
+	margin-left: 100%;
+	top: 0;
+	display: block;
+	width: 100%;
+	overflow: visible; 
+}
+.oldie .flexnav ul li:hover ul { margin-left: 100%; top: 0; }
+.oldie .menu-button { display: none; }
+.oldie.ie7 .flexnav li { width: 19.9%; }
